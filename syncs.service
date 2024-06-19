@@ -1,0 +1,13 @@
+[Unit]
+Description=Advanced legacy sync server
+Documentation=https://www.zhihu.com/people/micyng
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+# 需自行修改路径
+ExecStart=/home/ubuntu/codes/sync_server /home/ubuntu/codes/rmt.ini
+
+[Install]
+WantedBy=multi-user.target
