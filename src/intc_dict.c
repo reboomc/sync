@@ -60,5 +60,7 @@ intc_cli_t *intc_fetch_dict(const char *us_path, start_cli sf) {
 
 void intc_dispose_dict(close_cli cf) {
   _close_func = cf;
+  if (!_d) 
+    return;
   dictRelease(_d);
 }
